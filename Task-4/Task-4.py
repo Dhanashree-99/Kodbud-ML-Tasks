@@ -23,7 +23,7 @@ plt.title("Survival Count (0 = Not Survived, 1 = Survived)")
 plt.show()
 
 sns.barplot(x='Sex', y='Survived', data=df)
-plt.title("Gender vs Survival\n(0 = Not Survived, 1 = Survived)")
+plt.title("Gender vs Survival\n(0 = Female, 1 = Male)")
 plt.show()
 
 X = df[['Pclass','Sex','Age','SibSp','Parch','Fare']]
@@ -45,4 +45,5 @@ print("Confusion Matrix:\n",cm)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm,  display_labels=['Not Survived', 'Survived'])
 disp.plot(cmap=plt.cm.Greens)
 plt.title("Confusion Matrix - Logistic")
+
 plt.show()
